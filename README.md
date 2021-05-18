@@ -21,4 +21,6 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+
+#################   HEROKU   ####################
+http://glacial-island-67235.herokuapp.com/users/sign_up

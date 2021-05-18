@@ -10,5 +10,5 @@ class User < ApplicationRecord
   end
 
     has_many :attendances
-    has_many :events
+    has_many :events, through: :attendances
 end
