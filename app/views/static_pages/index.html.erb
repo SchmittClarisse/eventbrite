@@ -1,0 +1,36 @@
+<html lang="en">
+<header class="text-center">
+<h1> Bienvenue sur notre site Eventbrite !</h1><p></p>
+<h5> Merci de t'inscrire ou de te connecter pour continuer la navigation &#x1F601; </h5><p></p>
+</header>
+<br>
+<br>
+<body class="text-center">
+<ul>
+  <% if user_signed_in? %>
+
+    <p>&#128312; Si tu souhaites te déconnecter clique ici &#10145;&#65039 <%= link_to "Sign out", destroy_user_session_path, method: :delete %></p>
+
+    <p>&#128312; Voici l'email associé à ton compte : <%= current_user.email %></p>
+
+    <p>&#128312; Tu souhaites modifier tes données ? C'est par ici &#10145;&#65039 <%= link_to "Edit email / password", edit_user_registration_path %></p>
+
+  <% else %>
+  
+  <p>&#128312; Si tu souhaites te connecter clique ici &#10145;&#65039 <%= link_to "Sign in", new_user_session_path %></p>
+
+
+  <p>&#128312; Si tu souhaites t'inscrire clique ici &#10145;&#65039 <%= link_to "Sign up", new_user_registration_path %></p>
+
+  <% end %>
+</ul>
+<br>
+<br>
+<br>
+
+</body>
+
+  <footer class="mt-auto text-red-50">
+    <p>Participe à des événements mémorables sans attendre !</p>
+  </footer>
+</html>
